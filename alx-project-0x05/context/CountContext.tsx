@@ -8,7 +8,7 @@ interface CountContextProps {
 
 const CounterContext = createContext<CountContextProps | undefined>(undefined);
 
-export default function CountProvider({ children }: { children: ReactNode }) {
+export function CountProvider({ children }: { children: ReactNode }) {
   const [count, setCount] = useState(0);
 
   const increment = () => setCount((prev) => prev + 1);
